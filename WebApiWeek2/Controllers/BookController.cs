@@ -59,7 +59,6 @@ namespace WebApiWeek2.Controllers
                 entity.UpdateDate = DateTime.Now;
                 entity.Name = updateBookDto.Name;
                 entity.Isbnno = updateBookDto.Isbnno;
-                entity.AuthorId = updateBookDto.AuthorId;
                 await _bookRepository.Update(entity);
                 return Ok(entity);
         }
